@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: 14.x
       - run: npm install
-      - uses: sterlingwes/gh-pages-deploy-action@v1.1
+      - run: npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          source-directory: dist
-          access-token: ${{ secrets.GITHUB_TOKEN }}
-          build-command: npm run build
+          folder: dist # The folder the action should deploy.
