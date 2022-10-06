@@ -22,4 +22,5 @@ jobs:
       - uses: sterlingwes/gh-pages-deploy-action@v1.1
         with:
           source-directory: dist
+          access-token: ${{ secrets.GITHUB_TOKEN }}
           build-command: npm run build
