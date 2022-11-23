@@ -56,7 +56,8 @@ module.exports = {
 
   copyDependencies: {
     dist: {
-      "*assets/js/theme-custom.js": ""
+      "*assets/js/theme-custom.js": "",
+      "../sitemap.xml": "",
     },
 
     build: {
